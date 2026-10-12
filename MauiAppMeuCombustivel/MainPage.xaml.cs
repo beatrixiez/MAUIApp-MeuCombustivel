@@ -14,15 +14,20 @@
                 double etanol = Convert.ToDouble(txt_etanol.Text);
                 double gasolina = Convert.ToDouble(txt_gasolina.Text);
 
-                string msg = "";
+                string marca = txt_marcaVeiculo.Text;
+                string modelo = txt_modeloVeiculo.Text;
+
+                string combustivelRecomendado = "";
 
                 if(etanol <= (gasolina * 0.7))
                 {
-                    msg = "O etanol está compensando.";
+                    combustivelRecomendado = "O etanol";
                 } else
                 {
-                    msg = "A gasolina está compensando.";
+                    combustivelRecomendado = "A gasolina";
                 }
+
+                string msg = $"{combustivelRecomendado} é a melhor opção para o seu veículo {marca} {modelo}.";
 
                 DisplayAlertAsync("Calculando", msg, "OK");
             }

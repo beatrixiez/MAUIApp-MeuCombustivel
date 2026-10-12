@@ -14,11 +14,17 @@
                 SemanticProperties.Description="dot net bot in a submarine number ten" />
 
             <Label Text="Preço do Etanol:" />
-            <Entry x:Name="txt_etanol" Placeholder="R$ " />
+            <Entry x:Name="txt_etanol" Placeholder="R$ " Keyboard="Numeric"/>
 
             <Label Text="Preço da Gasolina:" />
-            <Entry x:Name="txt_gasolina" Placeholder="R$ "/>
-                
+            <Entry x:Name="txt_gasolina" Placeholder="R$ " Keyboard="Numeric"/>
+
+            <Label Text="Marca do veículo:" />
+            <Entry x:Name="txt_marcaVeiculo"/>
+
+            <Label Text="Modelo do veículo:" />
+            <Entry x:Name="txt_modeloVeiculo"/>
+
             <Button Text="Qual compensa mais?" Clicked="Button_Clicked" />
                 
         </VerticalStackLayout>
